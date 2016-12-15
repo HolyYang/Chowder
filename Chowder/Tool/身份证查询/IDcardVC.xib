@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IDcardVC">
+            <connections>
+                <outlet property="infoLable" destination="tan-ga-15R" id="wQC-Gq-QRg"/>
+                <outlet property="textField" destination="udv-Dk-Uqy" id="ZwM-5u-eM7"/>
+                <outlet property="view" destination="8iM-GE-60n" id="0uu-CG-cHo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8iM-GE-60n">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入电话号码" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="udv-Dk-Uqy">
+                    <rect key="frame" x="20" y="89" width="500" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tan-ga-15R">
+                    <rect key="frame" x="30" y="139" width="540" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMG-oZ-6Be">
+                    <rect key="frame" x="521" y="89" width="69" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="搜索">
+                        <color key="titleColor" red="0.98823529409999999" green="0.3803921569" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickSearch:" destination="-1" eventType="touchUpInside" id="2kG-XD-OzW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="tan-ga-15R" secondAttribute="trailing" constant="30" id="0Dp-9G-iX1"/>
+                <constraint firstItem="ZMG-oZ-6Be" firstAttribute="leading" secondItem="udv-Dk-Uqy" secondAttribute="trailing" constant="1" id="19T-uS-aY8"/>
+                <constraint firstItem="udv-Dk-Uqy" firstAttribute="leading" secondItem="8iM-GE-60n" secondAttribute="leading" constant="20" id="2SF-FK-y3F"/>
+                <constraint firstItem="ZMG-oZ-6Be" firstAttribute="bottom" secondItem="udv-Dk-Uqy" secondAttribute="bottom" id="5tO-1S-wUf"/>
+                <constraint firstItem="tan-ga-15R" firstAttribute="top" secondItem="8iM-GE-60n" secondAttribute="top" constant="139" id="Hfv-T5-dOu"/>
+                <constraint firstItem="ZMG-oZ-6Be" firstAttribute="top" secondItem="udv-Dk-Uqy" secondAttribute="top" id="QG3-oT-sdq"/>
+                <constraint firstItem="tan-ga-15R" firstAttribute="leading" secondItem="8iM-GE-60n" secondAttribute="leading" constant="30" id="YdU-U7-xi7"/>
+                <constraint firstAttribute="bottom" secondItem="tan-ga-15R" secondAttribute="bottom" constant="30" id="hJc-O9-OV2"/>
+                <constraint firstAttribute="trailing" secondItem="ZMG-oZ-6Be" secondAttribute="trailing" constant="10" id="iUL-VF-pf5"/>
+                <constraint firstItem="udv-Dk-Uqy" firstAttribute="top" secondItem="8iM-GE-60n" secondAttribute="top" constant="89" id="nHM-75-qGW"/>
+                <constraint firstAttribute="trailing" secondItem="udv-Dk-Uqy" secondAttribute="trailing" constant="80" id="rWG-3m-7vC"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="hJc-O9-OV2"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-89" y="428"/>
+        </view>
+    </objects>
+</document>

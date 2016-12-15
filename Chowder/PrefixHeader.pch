@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  Chowder
+//
+//  Created by YangY on 16/8/9.
+//  Copyright © 2016年 YangY. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "MBProgressHUD.h"
+#import "UITableViewCell+y.h"
+#import <MobAPI/MobAPI.h>
+#import "UIImageView+WebCache.h"
+
+//window
+#define kKeyWindow                  [UIApplication sharedApplication].keyWindow
+//屏幕宽度 (单位：点)
+#define kScreen_Width               [UIScreen mainScreen].bounds.size.width
+//屏幕高度（单位：点）
+#define kScreen_Height              [UIScreen mainScreen].bounds.size.height
+
+//定义颜色
+#define CCOLOR(R, G, B, A)          [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+#define UIColorFromRGB(rgbValue)    [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0x00FF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define APP_ViewBackground_Color    UIColorFromRGB(0xececec)
+#define APP_Title_Color             UIColorFromRGB(0x555555)
+#define APP_Details_Color           UIColorFromRGB(0x777777)
+
+
+//定义字号
+#define APP_FONT_13                [UIFont systemFontOfSize:13.0]
+#define APP_FONT_14                [UIFont systemFontOfSize:14.0]
+#define APP_FONT_15                [UIFont systemFontOfSize:15.0]
+#define APP_FONT_16                [UIFont systemFontOfSize:16.0]
+
+//NSLog
+#define Log(...) NSLog(@"%s 第%d行 \n %@\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+
+//定义UIImage对象
+#define IMAGE(imageName) [UIImage imageNamed:imageName]
+
+//定义NSURL
+#define NSURL(urlString) [NSURL URLWithString:urlString]
+#endif /* PrefixHeader_pch */
